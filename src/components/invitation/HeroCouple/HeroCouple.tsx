@@ -5,20 +5,28 @@ import styles from './HeroCouple.module.css';
 
 // Positions déterministes (pas de random à chaque rendu) pour les particules/étoiles.
 const SPARKLES = [
-  { x: 8, delay: 0, duration: 7.5, size: 5, kind: 'star' },
-  { x: 18, delay: 1.4, duration: 8.5, size: 3, kind: 'dot' },
-  { x: 27, delay: 3.1, duration: 7, size: 4, kind: 'dot' },
-  { x: 36, delay: 0.6, duration: 9, size: 6, kind: 'star' },
-  { x: 45, delay: 2.2, duration: 7.8, size: 3, kind: 'dot' },
-  { x: 53, delay: 4, duration: 8, size: 5, kind: 'star' },
-  { x: 61, delay: 1, duration: 7.2, size: 3, kind: 'dot' },
-  { x: 69, delay: 3.6, duration: 8.8, size: 4, kind: 'dot' },
-  { x: 77, delay: 0.3, duration: 7.6, size: 6, kind: 'star' },
-  { x: 85, delay: 2.8, duration: 8.2, size: 3, kind: 'dot' },
-  { x: 93, delay: 1.8, duration: 7.4, size: 4, kind: 'star' },
-  { x: 14, delay: 5, duration: 9.5, size: 3, kind: 'dot' },
-  { x: 58, delay: 5.6, duration: 8.6, size: 5, kind: 'dot' },
-  { x: 40, delay: 6.2, duration: 7.9, size: 3, kind: 'dot' },
+  { x: 5, delay: 0, duration: 11.5, size: 5, kind: 'star' },
+  { x: 12, delay: 1.4, duration: 12.5, size: 3, kind: 'dot' },
+  { x: 18, delay: 3.1, duration: 11, size: 4, kind: 'dot' },
+  { x: 24, delay: 5.8, duration: 13, size: 3, kind: 'dot' },
+  { x: 30, delay: 0.6, duration: 13, size: 6, kind: 'star' },
+  { x: 36, delay: 2.2, duration: 11.8, size: 3, kind: 'dot' },
+  { x: 42, delay: 4.4, duration: 12.2, size: 4, kind: 'dot' },
+  { x: 48, delay: 4, duration: 12, size: 5, kind: 'star' },
+  { x: 54, delay: 6.6, duration: 11.4, size: 3, kind: 'dot' },
+  { x: 60, delay: 1, duration: 11.2, size: 3, kind: 'dot' },
+  { x: 65, delay: 3.4, duration: 12.6, size: 4, kind: 'dot' },
+  { x: 70, delay: 3.6, duration: 12.8, size: 4, kind: 'dot' },
+  { x: 75, delay: 7.2, duration: 11.6, size: 3, kind: 'dot' },
+  { x: 80, delay: 0.3, duration: 11.6, size: 6, kind: 'star' },
+  { x: 85, delay: 2.8, duration: 12.2, size: 3, kind: 'dot' },
+  { x: 90, delay: 5.2, duration: 13.4, size: 4, kind: 'dot' },
+  { x: 95, delay: 1.8, duration: 11.4, size: 4, kind: 'star' },
+  { x: 14, delay: 5, duration: 13.5, size: 3, kind: 'dot' },
+  { x: 58, delay: 5.6, duration: 12.6, size: 5, kind: 'dot' },
+  { x: 40, delay: 6.2, duration: 11.9, size: 3, kind: 'dot' },
+  { x: 22, delay: 8, duration: 12.4, size: 3, kind: 'dot' },
+  { x: 88, delay: 7.6, duration: 12, size: 3, kind: 'dot' },
 ] as const;
 
 export function HeroCouple() {
@@ -62,10 +70,6 @@ export function HeroCouple() {
         <div className={styles.veil} aria-hidden="true">
           <span className={styles.veilLayerA} />
           <span className={styles.veilLayerB} />
-        </div>
-
-        <div className={styles.veilBand} aria-hidden="true">
-          <img className={styles.veilBandImg} src={mediaConfig.hero.veilBottom} alt="" draggable={false} />
         </div>
 
         <div className={styles.sparkles} aria-hidden="true">
