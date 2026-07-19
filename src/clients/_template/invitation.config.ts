@@ -18,6 +18,7 @@ export const invitationConfig: InvitationConfig = {
     weddingDate: '2027-01-01T00:00:00+02:00',     // ISO, avec le bon fuseau horaire
     weddingDateLabel: '1 janvier 2027',
     heroPhotoAlt: 'Prénom et Prénom',
+    heroTagline: 'Phrase courte sous les prénoms (thème amour).',
   },
   editorial: {
     invitationSentence: 'ont l’honneur de vous convier à la célébration de leur mariage',

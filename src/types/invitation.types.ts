@@ -16,6 +16,7 @@ export type InvitationConfig = {
     weddingDate: string;
     weddingDateLabel: string;
     heroPhotoAlt: string;
+    heroTagline: string;
   };
   editorial: {
     invitationSentence: string;

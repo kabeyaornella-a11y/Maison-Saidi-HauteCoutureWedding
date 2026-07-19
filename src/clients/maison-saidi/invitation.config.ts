@@ -17,6 +17,7 @@ export const invitationConfig: InvitationConfig = {
     weddingDate: '2027-05-22T00:00:00+02:00',
     weddingDateLabel: '22 mai 2027',
     heroPhotoAlt: 'Saïmira et Aindi',
+    heroTagline: 'Un amour qui traverse le temps.',
   },
   editorial: {
     invitationSentence: 'ont l’honneur de vous convier à la célébration de leur mariage',
