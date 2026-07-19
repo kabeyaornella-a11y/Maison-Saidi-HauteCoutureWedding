@@ -1,6 +1,7 @@
 import { IntroMaison } from '../components/invitation/IntroMaison/IntroMaison';
 import { HeroCouple } from '../components/invitation/HeroCouple/HeroCouple';
 import { SilkBand } from '../components/invitation/SilkBand/SilkBand';
+import { GoldDivider } from '../components/invitation/GoldDivider/GoldDivider';
 import { EditorialBanner } from '../components/invitation/EditorialBanner/EditorialBanner';
 import { HandsSection } from '../components/invitation/HandsSection/HandsSection';
 import { CountdownSection } from '../components/invitation/CountdownSection/CountdownSection';
@@ -32,7 +33,9 @@ export function App() {
     <main>
       <IntroMaison />
       <HeroCouple />
-      <SilkBand src={mediaConfig.hero.veilTop} />
+      <GoldDivider />
+      <SilkBand src={mediaConfig.hero.veilTop} monogramSrc={mediaConfig.brand.monogram} monogramAlt={invitationConfig.brand.monogramAlt} />
+      <GoldDivider />
       <HandsSection />
       <SilkBand src={mediaConfig.hero.silkBlueIvory} />
       {SHOW_SECTIONS_AFTER_HERO && (

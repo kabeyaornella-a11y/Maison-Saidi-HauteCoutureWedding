@@ -91,8 +91,6 @@ export function HeroCouple() {
           ))}
         </div>
 
-        <div className={styles.silkTransition} aria-hidden="true" />
-
         <div className={styles.identity}>
           <h1 className={styles.names}>
             <span className={styles.namesInk}>{invitationConfig.couple.displayNames}</span>

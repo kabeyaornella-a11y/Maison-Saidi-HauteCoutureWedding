@@ -7,7 +7,6 @@ export function HandsSection() {
   return (
     <Section label="La promesse" className={styles.root}>
       <img className={styles.photo} src={mediaConfig.hands.photo} alt={invitationConfig.hands.photoAlt} loading="lazy" />
-      <div className={styles.shade} />
       <p>{invitationConfig.hands.caption}</p>
     </Section>
   );
