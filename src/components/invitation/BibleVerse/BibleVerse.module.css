@@ -1,1 +1,69 @@
-.root{background:var(--ivory);background-image:linear-gradient(rgba(247,242,234,.84),rgba(247,242,234,.84)),var(--verse-bg);background-size:cover;background-position:center;padding:clamp(7rem,16vw,14rem) 0;text-align:center;color:var(--navy)}.root:before{content:"";position:absolute;inset:12% 8%;background:radial-gradient(circle,rgba(255,255,255,.8),transparent 65%);z-index:-1}.root blockquote{margin:0;display:grid;gap:2rem;justify-items:center}.root p{font:400 clamp(2rem,5vw,4rem)/1.35 var(--font-script);max-width:920px}.root cite{font:500 clamp(.7rem,1.2vw,.88rem)/1 var(--font-body);font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne)}
+.root {
+  background: var(--ivory) var(--verse-bg) center / cover no-repeat;
+  padding: clamp(7rem, 16vw, 14rem) 0;
+  text-align: center;
+  color: var(--navy);
+}
+
+.stage {
+  display: block;
+}
+
+.quote {
+  margin: 0;
+  display: grid;
+  gap: clamp(1.4rem, 3.4vw, 2.2rem);
+  justify-items: center;
+}
+
+.text {
+  margin: 0;
+  max-width: 920px;
+}
+
+/* Effet "écrit au fur et à mesure" : un balayage lent, comme un rideau qui
+   s'ouvre sur la citation (même principe que les prénoms du Hero). */
+.textInk {
+  display: inline-block;
+  font: 400 clamp(2rem, 5vw, 4rem) / 1.35 var(--font-script);
+  clip-path: inset(-25% 100% -25% 0);
+}
+
+.inView .textInk {
+  animation: writeVerse 5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s forwards;
+}
+
+@keyframes writeVerse {
+  to {
+    clip-path: inset(-25% 0% -25% 0);
+  }
+}
+
+.reference {
+  font: 500 clamp(0.7rem, 1.2vw, 0.88rem) / 1 var(--font-body);
+  font-style: normal;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  opacity: 0;
+}
+
+.inView .reference {
+  animation: fadeUpVerse 1s ease 4.6s forwards;
+}
+
+@keyframes fadeUpVerse {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .textInk {
+    animation: none;
+    clip-path: none;
+  }
+  .reference {
+    animation: none;
+    opacity: 1;
+  }
+}

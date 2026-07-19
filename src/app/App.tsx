@@ -6,6 +6,7 @@ import { EditorialBanner } from '../components/invitation/EditorialBanner/Editor
 import { HandsSection } from '../components/invitation/HandsSection/HandsSection';
 import { CountdownSection } from '../components/invitation/CountdownSection/CountdownSection';
 import { BibleVerse } from '../components/invitation/BibleVerse/BibleVerse';
+import { SectionCover } from '../components/invitation/SectionCover/SectionCover';
 import { StorySection } from '../components/invitation/StorySection/StorySection';
 import { CelebrationsIntro } from '../components/invitation/CelebrationsIntro/CelebrationsIntro';
 import { VenueSection } from '../components/invitation/VenueSection/VenueSection';
@@ -26,7 +27,7 @@ import { useClient } from '../context/ClientContext';
 const SHOW_SECTIONS_AFTER_HERO = false;
 
 export function App() {
-  const { venuesConfig, invitationConfig, mediaConfig } = useClient();
+  const { venuesConfig, invitationConfig, mediaConfig, storyConfig } = useClient();
   const hasSecondVerse = invitationConfig.verses.length > 1;
 
   return (
@@ -38,11 +39,12 @@ export function App() {
       <GoldDivider />
       <HandsSection />
       <SilkBand src={mediaConfig.hero.silkBlueIvory} />
+      <BibleVerse verseIndex={0} />
+      <SectionCover id="notre-histoire" src={mediaConfig.story.cover} title={storyConfig.title} subtitle={storyConfig.subtitle} />
       {SHOW_SECTIONS_AFTER_HERO && (
         <>
           <EditorialBanner />
           <CountdownSection />
-          <BibleVerse verseIndex={0} />
           <StorySection />
           <CelebrationsIntro />
           <VenueSection id="ceremonie-civile" venue={venuesConfig.civil} icon={<CivilVenueIcon />} tone="ivory" />

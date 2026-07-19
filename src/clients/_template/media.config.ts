@@ -17,4 +17,5 @@ export const mediaConfig: MediaConfig = {
   hands: { photo: `${base}/photos/couple-hands.jpg` },
   countdown: { background: `${base}/backgrounds/countdown-night.png` },
   verses: { first: `${base}/backgrounds/verse-ivory.png` },
+  story: { cover: `${base}/backgrounds/story-cover.png` },
 };

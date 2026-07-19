@@ -10,6 +10,7 @@ export type MediaConfig = {
   hands: { photo: string };
   countdown: { background: string };
   verses: { first: string };
+  story: { cover: string };
 };
 
 export type ThemeConfig = {

@@ -24,4 +24,7 @@ export const mediaConfig: MediaConfig = {
   verses: {
     first: `${base}/backgrounds/verse-ivory.png`,
   },
+  story: {
+    cover: `${base}/backgrounds/story-cover.png`,
+  },
 };
