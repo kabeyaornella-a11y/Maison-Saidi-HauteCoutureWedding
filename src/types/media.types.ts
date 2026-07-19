@@ -4,7 +4,6 @@ export type MediaConfig = {
   hero: {
     photo: string;
     veilTop: string;
-    veilBottom: string;
     silkIvory: string;
     silkBlueIvory: string;
   };

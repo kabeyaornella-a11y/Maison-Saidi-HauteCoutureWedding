@@ -11,10 +11,9 @@ export const mediaConfig: MediaConfig = {
   },
   hero: {
     photo: `${base}/photos/couple-hero.png`,
-    veilTop: `${base}/overlays/veil-top.png`,
-    veilBottom: `${base}/overlays/veil-bottom.png`,
+    veilTop: `${base}/backgrounds/bandeau-blanc-drape.png`,
     silkIvory: `${base}/backgrounds/fond-soie-ivory.png`,
-    silkBlueIvory: `${base}/backgrounds/fond-satin-blue-ivory.png`,
+    silkBlueIvory: `${base}/backgrounds/fond-bleu-fleurs-bougies.png`,
   },
   hands: {
     photo: `${base}/photos/couple-hands.jpg`,
