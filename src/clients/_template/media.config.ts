@@ -18,4 +18,10 @@ export const mediaConfig: MediaConfig = {
   countdown: { background: `${base}/backgrounds/countdown-night.png` },
   verses: { first: `${base}/backgrounds/verse-ivory.png` },
   story: { cover: `${base}/backgrounds/story-cover.png` },
+  venues: { background: `${base}/backgrounds/fond-satin-blue-ivory.png` },
+  illustrations: {
+    mairie: `${base}/illustrations/mairie.png`,
+    gardenia: `${base}/illustrations/reception.png`,
+  },
+  program: { cover: `${base}/backgrounds/programme-clair.png` },
 };

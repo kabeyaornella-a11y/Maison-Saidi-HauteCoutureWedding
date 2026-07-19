@@ -16,6 +16,13 @@
   user-select: none;
 }
 
+/* Fondu en haut de l'image : se dissout dans le fond ivoire uni du bloc,
+   pour continuer sans démarcation le fondu déjà fait en bas du bloc précédent. */
+.imageFadeTop {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 18%);
+}
+
 .identity {
   position: absolute;
   z-index: 2;
@@ -30,7 +37,9 @@
   margin: 0;
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--navy);
 }
 

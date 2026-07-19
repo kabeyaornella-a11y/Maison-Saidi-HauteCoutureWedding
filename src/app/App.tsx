@@ -1,12 +1,12 @@
 import { IntroMaison } from '../components/invitation/IntroMaison/IntroMaison';
 import { HeroCouple } from '../components/invitation/HeroCouple/HeroCouple';
 import { SilkBand } from '../components/invitation/SilkBand/SilkBand';
-import { GoldDivider } from '../components/invitation/GoldDivider/GoldDivider';
 import { EditorialBanner } from '../components/invitation/EditorialBanner/EditorialBanner';
 import { HandsSection } from '../components/invitation/HandsSection/HandsSection';
 import { CountdownSection } from '../components/invitation/CountdownSection/CountdownSection';
 import { BibleVerse } from '../components/invitation/BibleVerse/BibleVerse';
 import { SectionCover } from '../components/invitation/SectionCover/SectionCover';
+import { LesLieux } from '../components/invitation/LesLieux/LesLieux';
 import { StorySection } from '../components/invitation/StorySection/StorySection';
 import { CelebrationsIntro } from '../components/invitation/CelebrationsIntro/CelebrationsIntro';
 import { VenueSection } from '../components/invitation/VenueSection/VenueSection';
@@ -34,17 +34,21 @@ export function App() {
     <main>
       <IntroMaison />
       <HeroCouple />
-      <GoldDivider />
-      <SilkBand src={mediaConfig.hero.veilTop} monogramSrc={mediaConfig.brand.monogram} monogramAlt={invitationConfig.brand.monogramAlt} />
-      <GoldDivider />
+      <SilkBand
+        src={mediaConfig.hero.veilTop}
+        monogramSrc={mediaConfig.brand.monogram}
+        monogramAlt={invitationConfig.brand.monogramAlt}
+        edgeLines
+      />
       <HandsSection />
-      <SilkBand src={mediaConfig.hero.silkBlueIvory} />
+      <CountdownSection />
       <BibleVerse verseIndex={0} />
-      <SectionCover id="notre-histoire" src={mediaConfig.story.cover} title={storyConfig.title} subtitle={storyConfig.subtitle} />
+      <SectionCover id="notre-histoire" src={mediaConfig.story.cover} title={storyConfig.title} fadeTop />
+      <LesLieux />
+      <SectionCover id="le-programme" src={mediaConfig.program.cover} title="Le programme" />
       {SHOW_SECTIONS_AFTER_HERO && (
         <>
           <EditorialBanner />
-          <CountdownSection />
           <StorySection />
           <CelebrationsIntro />
           <VenueSection id="ceremonie-civile" venue={venuesConfig.civil} icon={<CivilVenueIcon />} tone="ivory" />

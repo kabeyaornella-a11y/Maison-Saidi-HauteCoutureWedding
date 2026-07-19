@@ -19,12 +19,22 @@ export const mediaConfig: MediaConfig = {
     photo: `${base}/photos/couple-hands.jpg`,
   },
   countdown: {
-    background: `${base}/backgrounds/countdown-night.png`,
+    background: `${base}/backgrounds/countdown-starfield.jpg`,
   },
   verses: {
     first: `${base}/backgrounds/verse-ivory.png`,
   },
   story: {
     cover: `${base}/backgrounds/story-cover.png`,
+  },
+  venues: {
+    background: `${base}/backgrounds/fond-bleu-fleurs-bougies.png`,
+  },
+  illustrations: {
+    mairie: `${base}/illustrations/mairie-gennevilliers.png`,
+    gardenia: `${base}/illustrations/gardenia-reception.jpg`,
+  },
+  program: {
+    cover: `${base}/backgrounds/programme-clair.jpg`,
   },
 };

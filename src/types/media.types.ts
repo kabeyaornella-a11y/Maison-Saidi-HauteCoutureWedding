@@ -11,6 +11,9 @@ export type MediaConfig = {
   countdown: { background: string };
   verses: { first: string };
   story: { cover: string };
+  venues: { background: string };
+  illustrations: { mairie: string; gardenia: string };
+  program: { cover: string };
 };
 
 export type ThemeConfig = {

@@ -1,12 +1,38 @@
 .root {
-  background: var(--ivory) var(--verse-bg) center / cover no-repeat;
+  position: relative;
+  background: var(--ivory);
   padding: clamp(7rem, 16vw, 14rem) 0;
   text-align: center;
   color: var(--navy);
 }
 
+/* Image de fond isolée du fond ivoire uni, avec un fondu en bas qui se dissout
+   dans cette même couleur ivoire : la section suivante fait le même fondu en
+   haut, pour qu'on ne voie jamais de démarcation nette entre les deux blocs. */
+.bgImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--verse-bg);
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 78%, transparent 100%);
+}
+
 .stage {
+  position: relative;
+  z-index: 1;
   display: block;
+}
+
+.kicker {
+  display: block;
+  margin: 0 0 clamp(1.4rem, 3vw, 2rem);
+  font: 500 clamp(0.62rem, 1.2vw, 0.82rem) / 1 var(--font-body);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--champagne);
 }
 
 .quote {
@@ -19,18 +45,25 @@
 .text {
   margin: 0;
   max-width: 920px;
+  display: grid;
+  gap: 0.3em;
 }
 
-/* Effet "écrit au fur et à mesure" : un balayage lent, comme un rideau qui
-   s'ouvre sur la citation (même principe que les prénoms du Hero). */
-.textInk {
+.lineWrap {
+  display: block;
+  overflow: hidden;
+}
+
+/* Effet "écrit au fur et à mesure" : chaque ligne se dessine l'une après
+   l'autre, comme un rideau qui s'ouvre (même principe que les prénoms du Hero). */
+.lineInk {
   display: inline-block;
   font: 400 clamp(2rem, 5vw, 4rem) / 1.35 var(--font-script);
   clip-path: inset(-25% 100% -25% 0);
 }
 
-.inView .textInk {
-  animation: writeVerse 5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s forwards;
+.inView .lineInk {
+  animation: writeVerse var(--line-duration, 2.6s) cubic-bezier(0.22, 0.61, 0.36, 1) var(--line-delay, 0.2s) forwards;
 }
 
 @keyframes writeVerse {
@@ -49,7 +82,7 @@
 }
 
 .inView .reference {
-  animation: fadeUpVerse 1s ease 4.6s forwards;
+  animation: fadeUpVerse 1s ease var(--ref-delay, 4.6s) forwards;
 }
 
 @keyframes fadeUpVerse {
@@ -58,7 +91,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .textInk {
+  .lineInk {
     animation: none;
     clip-path: none;
   }

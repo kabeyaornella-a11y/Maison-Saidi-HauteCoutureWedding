@@ -7,12 +7,19 @@ type Props = {
   alt?: string;
   title: string;
   subtitle?: string;
+  fadeTop?: boolean;
 };
 
-export function SectionCover({ id, src, alt = '', title, subtitle }: Props) {
+export function SectionCover({ id, src, alt = '', title, subtitle, fadeTop = false }: Props) {
   return (
     <Section id={id} label={title} className={styles.root}>
-      <img className={styles.image} src={src} alt={alt} draggable={false} loading="lazy" />
+      <img
+        className={`${styles.image} ${fadeTop ? styles.imageFadeTop : ''}`}
+        src={src}
+        alt={alt}
+        draggable={false}
+        loading="lazy"
+      />
       <div className={styles.identity}>
         <h2 className={styles.title}>{title}</h2>
         {subtitle && <p className={styles.subtitle}>{subtitle}</p>}

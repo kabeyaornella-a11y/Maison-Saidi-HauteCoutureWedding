@@ -1,0 +1,111 @@
+.root {
+  background: var(--navy-deep) var(--bg) center / cover no-repeat;
+  color: var(--ivory);
+  padding: clamp(4rem, 10vw, 7rem) 0;
+}
+
+.title {
+  margin: 0 0 clamp(2.5rem, 7vw, 4.5rem);
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--champagne-light);
+  text-shadow: 0 2px 14px rgba(5, 11, 30, 0.6);
+}
+
+.grid {
+  display: grid;
+  gap: clamp(3rem, 8vw, 5rem);
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .blessing { order: 1; }
+  .civil { order: 2; }
+}
+
+.column {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 1.1rem;
+}
+
+.colTitle {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(0.78rem, 1.4vw, 0.95rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--champagne);
+}
+
+.illustration {
+  width: min(100%, 380px);
+  height: auto;
+}
+
+.venueName {
+  margin: 0;
+  font-family: var(--font-script);
+  font-size: clamp(1.9rem, 4.2vw, 2.8rem);
+  color: var(--ivory);
+}
+
+/* Bouton doré : relief (ombres internes) + reflet qui défile en continu. */
+.joinButton {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 2px;
+  padding: 1rem 2.4rem;
+  margin-top: 0.4rem;
+  font: 500 0.78rem/1 var(--font-body);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #3d2c0f;
+  cursor: pointer;
+  background: linear-gradient(180deg, #f8ecc6 0%, #e3bc72 30%, #ad7f3f 55%, #f0d9a4 78%, #caa24e 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -3px 5px rgba(85, 58, 12, 0.35),
+    0 10px 20px rgba(5, 11, 30, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.joinButton:hover {
+  transform: translateY(-2px);
+}
+
+.joinButton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    transparent 38%,
+    rgba(255, 255, 255, 0.75) 50%,
+    transparent 62%,
+    transparent 100%
+  );
+  background-size: 220% 100%;
+  animation: buttonShimmer 4.2s linear infinite;
+}
+
+@keyframes buttonShimmer {
+  0% { background-position: 120% 0; }
+  100% { background-position: -120% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .joinButton::after { animation: none; }
+}

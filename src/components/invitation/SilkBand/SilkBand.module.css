@@ -25,3 +25,51 @@
   opacity: 0.92;
   filter: drop-shadow(0 2px 10px rgba(5, 11, 30, 0.18));
 }
+
+/* Traits dorés qui délimitent le bandeau sur toute sa longueur, posés
+   directement sur l'image (pas de bande ivoire séparée autour). */
+.edgeLine {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  overflow: hidden;
+  background: linear-gradient(90deg, transparent, var(--champagne) 8%, var(--champagne) 92%, transparent);
+}
+
+.edgeLineTop { top: 0; }
+.edgeLineBottom { bottom: 0; }
+
+.edgeLine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 34%,
+    rgba(255, 255, 255, 0.95) 50%,
+    transparent 66%,
+    transparent 100%
+  );
+  background-size: 45% 100%;
+  background-repeat: no-repeat;
+  animation: travelLight 3.6s linear infinite;
+}
+
+.edgeLineBottom::after {
+  animation-delay: -1.8s;
+}
+
+@keyframes travelLight {
+  0% { background-position: -45% 0; }
+  100% { background-position: 145% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edgeLine::after {
+    animation: none;
+    opacity: 0;
+  }
+}
