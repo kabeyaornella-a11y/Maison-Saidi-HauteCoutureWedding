@@ -1,5 +1,6 @@
 import { IntroMaison } from '../components/invitation/IntroMaison/IntroMaison';
 import { HeroCouple } from '../components/invitation/HeroCouple/HeroCouple';
+import { SilkBand } from '../components/invitation/SilkBand/SilkBand';
 import { EditorialBanner } from '../components/invitation/EditorialBanner/EditorialBanner';
 import { HandsSection } from '../components/invitation/HandsSection/HandsSection';
 import { CountdownSection } from '../components/invitation/CountdownSection/CountdownSection';
@@ -24,17 +25,19 @@ import { useClient } from '../context/ClientContext';
 const SHOW_SECTIONS_AFTER_HERO = false;
 
 export function App() {
-  const { venuesConfig, invitationConfig } = useClient();
+  const { venuesConfig, invitationConfig, mediaConfig } = useClient();
   const hasSecondVerse = invitationConfig.verses.length > 1;
 
   return (
     <main>
       <IntroMaison />
       <HeroCouple />
+      <SilkBand src={mediaConfig.hero.veilTop} />
+      <HandsSection />
+      <SilkBand src={mediaConfig.hero.silkBlueIvory} />
       {SHOW_SECTIONS_AFTER_HERO && (
         <>
           <EditorialBanner />
-          <HandsSection />
           <CountdownSection />
           <BibleVerse verseIndex={0} />
           <StorySection />

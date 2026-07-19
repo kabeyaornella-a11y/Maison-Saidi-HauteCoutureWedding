@@ -64,6 +64,10 @@ export function HeroCouple() {
           <span className={styles.veilLayerB} />
         </div>
 
+        <div className={styles.veilBand} aria-hidden="true">
+          <img className={styles.veilBandImg} src={mediaConfig.hero.veilBottom} alt="" draggable={false} />
+        </div>
+
         <div className={styles.sparkles} aria-hidden="true">
           {SPARKLES.map((s, i) => (
             <span

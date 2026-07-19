@@ -84,10 +84,29 @@
   66% { transform: translate3d(-1.5%, 1.5%, 0) scale(1.015); }
 }
 
+/* Voile bleu et blanc (image PNG à vraie transparence), débute au repère bas de la photo. */
+.veilBand {
+  position: absolute;
+  z-index: 4;
+  inset: 62% 0 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.veilBandImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  opacity: 0.92;
+}
+
 /* Particules + étoiles à quatre branches, montent doucement depuis le voile. */
 .sparkles {
   position: absolute;
-  z-index: 4;
+  z-index: 5;
   inset: 40% 0 0;
   pointer-events: none;
   overflow: hidden;
@@ -125,7 +144,7 @@
 
 .silkTransition {
   position: absolute;
-  z-index: 5;
+  z-index: 6;
   inset: auto 0 0;
   height: 30%;
   pointer-events: none;
@@ -141,9 +160,9 @@
 
 .identity {
   position: absolute;
-  z-index: 6;
+  z-index: 7;
   left: 50%;
-  bottom: clamp(3.6rem, 8vh, 6.4rem);
+  top: 56%;
   width: min(92%, 900px);
   transform: translateX(-50%);
   text-align: center;
@@ -151,10 +170,11 @@
 
 .names {
   margin: 0;
-  font: 400 clamp(4rem, 11.5vw, 8.4rem) / 0.95 var(--font-script);
+  font: 400 clamp(2.75rem, 9vw, 5.4rem) / 0.95 var(--font-script);
   letter-spacing: 0.01em;
   color: var(--champagne);
   text-shadow: 0 2px 18px rgba(5, 11, 30, 0.28);
+  white-space: nowrap;
 }
 
 /* Effet "écriture" : le nom se révèle de gauche à droite quand le hero entre
@@ -175,7 +195,7 @@
 }
 
 .tagline {
-  margin: 0.9rem 0 0;
+  margin: clamp(0.5rem, 1.6vw, 0.9rem) 0 0;
   font-family: var(--font-display);
   font-style: italic;
   font-size: clamp(1rem, 2vw, 1.3rem);
@@ -195,7 +215,8 @@
 
 @media (max-width: 700px) {
   .veil { inset: 56% 0 0; }
-  .identity { bottom: 3.4rem; }
+  .veilBand { inset: 64% 0 0; }
+  .identity { top: 55%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
