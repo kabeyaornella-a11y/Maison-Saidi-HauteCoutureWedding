@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#050B1E" />
+  <!-- Titre et description réels injectés au runtime par ClientProvider selon le client actif (VITE_CLIENT_ID). -->
+  <meta name="description" content="Invitation de mariage — Eventia Signature" />
+  <title>Invitation</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!--
+    Formulaires statiques cachés : indispensables pour que Netlify les détecte au moment
+    du build (le parsing de Netlify Forms ne "voit" pas les formulaires générés par React
+    côté client). Les champs ci-dessous DOIVENT correspondre exactement aux "name" envoyés
+    par services/forms.service.ts. Ne jamais les supprimer même si le formulaire React
+    change de mise en page.
+  -->
+  <form name="playlist" data-netlify="true" hidden>
+    <input name="title" /><input name="artist" /><input name="firstName" /><textarea name="message"></textarea>
+  </form>
+  <form name="rsvp" data-netlify="true" hidden>
+    <input name="firstName" /><input name="lastName" /><input name="attendance" /><input name="attendanceScope" />
+    <input name="adults" /><input name="children" /><input name="companionName" /><input name="dietaryNeeds" />
+    <textarea name="message"></textarea>
+  </form>
+  <form name="live-album" data-netlify="true" hidden>
+    <input name="photoUrl" />
+  </form>
+  <form name="voice-book" data-netlify="true" hidden>
+    <input name="audioUrl" />
+  </form>
+
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

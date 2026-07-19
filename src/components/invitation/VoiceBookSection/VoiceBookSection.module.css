@@ -1,0 +1,91 @@
+.root {
+  background: var(--ivory-light);
+  color: var(--navy);
+  text-align: center;
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  border-top: 1px solid color-mix(in srgb, var(--champagne) 25%, transparent);
+}
+
+.title {
+  font-family: var(--font-script);
+  font-size: clamp(1.7rem, 3.8vw, 2.6rem);
+  color: var(--champagne);
+  margin: 0 0 0.6rem;
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto 1.6rem;
+  opacity: 0.85;
+}
+
+.recorder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c0433a;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+}
+
+.player {
+  width: min(360px, 100%);
+}
+
+.previewActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.note {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.error {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #a4453a;
+}
+
+.confirmation {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  color: var(--champagne);
+  max-width: 480px;
+  margin: 0 auto;
+}

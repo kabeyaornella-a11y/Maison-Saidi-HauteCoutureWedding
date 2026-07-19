@@ -1,0 +1,22 @@
+.root {
+  background: var(--ivory-light);
+  color: var(--navy);
+  text-align: center;
+  padding-block: clamp(3rem, 7vw, 5rem) clamp(1rem, 3vw, 2rem);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  margin: 0 0 1rem;
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  max-width: 620px;
+  margin: 0 auto;
+  opacity: 0.85;
+}

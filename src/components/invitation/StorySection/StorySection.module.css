@@ -1,0 +1,118 @@
+.root {
+  position: relative;
+  background: var(--ivory-light);
+  color: var(--navy);
+  padding-block: clamp(4rem, 10vw, 8rem);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 7vw, 5.5rem);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  color: var(--navy);
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-script);
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  color: var(--champagne);
+  margin: 0.4rem 0 0;
+}
+
+.chapters {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 8vw, 6rem);
+}
+
+.chapter {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.chapter:has(.imageFrame) {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .chapter:has(.imageFrame) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .chapter:has(.imageFrame):nth-of-type(even) .imageFrame {
+    order: 2;
+  }
+}
+
+.imageFrame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 18px 40px rgba(5, 11, 30, 0.14);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  position: relative;
+  max-width: 620px;
+  margin-inline: auto;
+}
+
+.number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--champagne);
+  letter-spacing: 0.14em;
+  margin-bottom: 0.6rem;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  font-size: clamp(0.68rem, 1.2vw, 0.82rem);
+  letter-spacing: 0.22em;
+  color: var(--steel-blue);
+  margin: 0 0 0.5rem;
+}
+
+.chapterTitle {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: var(--navy-deep);
+  margin: 0 0 1rem;
+}
+
+.paragraph {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 1.75;
+  color: var(--blue);
+  margin: 0 0 1rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.closing {
+  margin: clamp(3.5rem, 8vw, 6rem) 0 0;
+  text-align: center;
+  font-family: var(--font-script);
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  color: var(--champagne);
+}

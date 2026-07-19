@@ -1,0 +1,1 @@
+.transition{position:absolute;left:0;right:0;bottom:-1px;height:clamp(3rem,9vw,8rem);pointer-events:none;z-index:5}.light{background:linear-gradient(to bottom,transparent,var(--ivory))}.dark{background:linear-gradient(to bottom,transparent,var(--navy-deep))}

@@ -1,0 +1,93 @@
+.root {
+  background: var(--ivory-light);
+  color: var(--navy);
+  padding-block: clamp(4rem, 10vw, 8rem);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  color: var(--navy);
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-script);
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  color: var(--champagne);
+  margin: 0.4rem 0 0;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 640px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5.4rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: color-mix(in srgb, var(--champagne) 55%, transparent);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 4.6rem 1.6rem 1fr;
+  align-items: start;
+  gap: 0.75rem;
+  padding-block: 1.1rem;
+}
+
+.time {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--champagne);
+  padding-top: 0.2rem;
+  text-align: right;
+}
+
+.marker {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--champagne);
+  margin: 0.35rem auto 0;
+}
+
+.stepBody h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  margin: 0 0 0.25rem;
+  color: var(--navy-deep);
+}
+
+.stepBody p {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--blue);
+}
+
+.closing {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+  color: var(--blue);
+  margin: clamp(2.5rem, 6vw, 4rem) 0 0;
+}

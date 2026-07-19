@@ -1,0 +1,128 @@
+.root {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(-8.8rem, -11vw, -6rem);
+  min-height: clamp(650px, 88vw, 920px);
+  overflow: hidden;
+  color: var(--navy-deep);
+  text-align: center;
+  isolation: isolate;
+}
+
+.silkBackdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  background: var(--ivory);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.38) 10%, #000 26%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.38) 10%, #000 26%);
+}
+
+.silkImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+  opacity: 0.98;
+  filter: saturate(0.72) brightness(1.03);
+}
+
+.silkAccent {
+  position: absolute;
+  inset: auto 0 -22%;
+  width: 100%;
+  height: 72%;
+  object-fit: cover;
+  object-position: center 72%;
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.45) 36%, #000 78%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.45) 36%, #000 78%);
+}
+
+.root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(255,255,255,.9), transparent 47%),
+    linear-gradient(180deg, rgba(247,242,234,.18), rgba(247,242,234,.5));
+}
+
+.mark {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 52%;
+  width: min(62vw, 500px);
+  transform: translate(-50%, -50%);
+  opacity: 0.045;
+  filter: grayscale(1) contrast(1.25);
+}
+
+.content {
+  position: relative;
+  display: grid;
+  min-height: clamp(650px, 88vw, 920px);
+  place-content: center;
+  justify-items: center;
+  gap: 1.15rem;
+  padding: clamp(10rem, 20vw, 14rem) 0 clamp(6rem, 10vw, 9rem);
+}
+
+.kicker,
+.label {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(.62rem, 1.15vw, .82rem);
+  font-weight: 500;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+}
+
+.kicker { color: var(--champagne); }
+.label { color: var(--navy); }
+
+.names {
+  margin: .2rem 0 0;
+  font: 400 clamp(3rem, 8vw, 6.2rem) / .95 var(--font-script);
+}
+
+.rule {
+  width: clamp(5.5rem, 12vw, 8rem);
+  height: 1px;
+  margin: .35rem 0 .1rem;
+  background: linear-gradient(90deg, transparent, var(--champagne), transparent);
+}
+
+.sentence {
+  max-width: 660px;
+  margin: 0;
+  font: italic 400 clamp(1.08rem, 2.2vw, 1.55rem) / 1.55 var(--font-display);
+  color: #50617a;
+}
+
+.date {
+  margin: .5rem 0 0;
+  font: 400 clamp(2.3rem, 5.6vw, 4.7rem) / 1 var(--font-script);
+  color: var(--champagne);
+}
+
+@media (max-width: 700px) {
+  .root {
+    margin-top: -6.4rem;
+    min-height: 700px;
+  }
+
+  .content {
+    min-height: 700px;
+    padding: 9.5rem 1.1rem 5rem;
+  }
+
+  .silkImage { object-position: center 50%; }
+  .silkAccent { bottom: -10%; height: 62%; opacity: .16; }
+}

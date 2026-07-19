@@ -1,0 +1,39 @@
+.root {
+  background: var(--ivory);
+  color: var(--navy-deep);
+  text-align: center;
+  padding-block: clamp(4rem, 9vw, 7rem);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  margin: 0 0 1.4rem;
+}
+
+.intro {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  color: var(--champagne);
+  max-width: 560px;
+  margin: 0 auto 1rem;
+}
+
+.secondary {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  opacity: 0.85;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

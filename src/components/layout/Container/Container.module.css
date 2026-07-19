@@ -1,0 +1,1 @@
+.container{width:min(calc(100% - 2.5rem),var(--content-width));margin-inline:auto}@media(min-width:768px){.container{width:min(calc(100% - 4rem),var(--content-width))}}

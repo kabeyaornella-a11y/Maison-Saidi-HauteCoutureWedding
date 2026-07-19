@@ -1,0 +1,1 @@
+import styles from './SectionTransition.module.css';export function SectionTransition({tone='light'}:{tone?:'light'|'dark'}){return <div aria-hidden className={`${styles.transition} ${styles[tone]}`}/>}
