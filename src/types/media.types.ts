@@ -14,6 +14,7 @@ export type MediaConfig = {
   venues: { background: string };
   illustrations: { mairie: string; gardenia: string };
   program: { cover: string };
+  finalScene: { photo: string };
 };
 
 export type ThemeConfig = {
@@ -29,6 +30,9 @@ export type ThemeConfig = {
     ivoryLight: string;
     black: string;
     white: string;
+    textDark: string;
+    textSecondary: string;
+    warmWhite: string;
   };
   fonts: {
     display: string;

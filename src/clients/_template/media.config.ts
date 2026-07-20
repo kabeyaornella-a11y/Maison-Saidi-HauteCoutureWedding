@@ -24,4 +24,5 @@ export const mediaConfig: MediaConfig = {
     gardenia: `${base}/illustrations/reception.png`,
   },
   program: { cover: `${base}/backgrounds/programme-clair.png` },
+  finalScene: { photo: `${base}/photos/couple-final.jpg` },
 };

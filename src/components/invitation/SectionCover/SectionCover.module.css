@@ -33,14 +33,22 @@
   text-align: center;
 }
 
+.kicker {
+  margin: 0 0 clamp(0.9rem, 2vw, 1.3rem);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(0.56rem, 1.2vw, 0.6875rem);
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--champagne);
+}
+
 .title {
   margin: 0;
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: clamp(2.4rem, 6vw, 4.4rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--navy);
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: clamp(2.875rem, 8vw, 5.125rem);
+  color: var(--navy-deep);
 }
 
 .subtitle {

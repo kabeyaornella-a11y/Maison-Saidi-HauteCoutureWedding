@@ -11,6 +11,11 @@ export type InvitationConfig = {
     metaDescription: string;
     pageTitle: string;
   };
+  intro: {
+    surtitle: string;
+    invitationPhrase: string;
+    enterLabel: string;
+  };
   couple: {
     displayNames: string;
     weddingDate: string;
@@ -32,4 +37,20 @@ export type InvitationConfig = {
     labels: [string, string, string, string];
   };
   verses: BibleVerseData[];
+  story: {
+    surtitle: string;
+  };
+  venues: {
+    surtitle: string;
+  };
+  program: {
+    surtitle: string;
+    title: string;
+  };
+  finalScene: {
+    dateLabel: string;
+    phrase: string;
+    signatureLine: string;
+    footer: string;
+  };
 };

@@ -17,6 +17,7 @@ export function CountdownSection() {
     >
       <Container>
         <div className={styles.content}>
+          <p className={styles.surtitle}>Collection {invitationConfig.brand.collection}</p>
           <h2>{invitationConfig.countdown.title}</h2>
           <div className={styles.grid}>
             {values.map((v, i) => (
@@ -26,7 +27,7 @@ export function CountdownSection() {
               </div>
             ))}
           </div>
-          <p>{invitationConfig.countdown.sentence}</p>
+          <p className={styles.sentence}>{invitationConfig.countdown.sentence}</p>
         </div>
       </Container>
     </Section>

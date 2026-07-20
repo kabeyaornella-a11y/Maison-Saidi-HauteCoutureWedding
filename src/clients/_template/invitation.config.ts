@@ -13,6 +13,11 @@ export const invitationConfig: InvitationConfig = {
     metaDescription: 'Description courte pour le partage sur les réseaux / Google',
     pageTitle: 'Titre affiché dans l’onglet du navigateur',
   },
+  intro: {
+    surtitle: 'La Maison présente',
+    invitationPhrase: 'Phrase d’invitation courte, sur l’écran d’accueil.',
+    enterLabel: 'Découvrir l’invitation',
+  },
   couple: {
     displayNames: 'Prénom & Prénom',
     weddingDate: '2027-01-01T00:00:00+02:00',     // ISO, avec le bon fuseau horaire
@@ -37,4 +42,20 @@ export const invitationConfig: InvitationConfig = {
     { text: 'Première citation.', reference: 'Référence 1' },
     { text: 'Deuxième citation.', reference: 'Référence 2' },
   ],
+  story: {
+    surtitle: 'Chapitre I',
+  },
+  venues: {
+    surtitle: 'Les adresses',
+  },
+  program: {
+    surtitle: 'Le déroulé de la journée',
+    title: 'Le programme',
+  },
+  finalScene: {
+    dateLabel: 'Le 1 janvier 2027',
+    phrase: 'Phrase finale, courte et émotionnelle.',
+    signatureLine: 'Avec tout notre amour,',
+    footer: 'Nom de la Maison · Collection Saison Année',
+  },
 };

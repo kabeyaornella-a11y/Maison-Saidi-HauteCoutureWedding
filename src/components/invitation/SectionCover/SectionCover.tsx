@@ -5,12 +5,13 @@ type Props = {
   id?: string;
   src: string;
   alt?: string;
+  kicker?: string;
   title: string;
   subtitle?: string;
   fadeTop?: boolean;
 };
 
-export function SectionCover({ id, src, alt = '', title, subtitle, fadeTop = false }: Props) {
+export function SectionCover({ id, src, alt = '', kicker, title, subtitle, fadeTop = false }: Props) {
   return (
     <Section id={id} label={title} className={styles.root}>
       <img
@@ -21,6 +22,7 @@ export function SectionCover({ id, src, alt = '', title, subtitle, fadeTop = fal
         loading="lazy"
       />
       <div className={styles.identity}>
+        {kicker && <p className={styles.kicker}>{kicker}</p>}
         <h2 className={styles.title}>{title}</h2>
         {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
       </div>

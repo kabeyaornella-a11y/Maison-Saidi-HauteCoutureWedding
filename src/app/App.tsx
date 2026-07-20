@@ -43,9 +43,20 @@ export function App() {
       <HandsSection />
       <CountdownSection />
       <BibleVerse verseIndex={0} />
-      <SectionCover id="notre-histoire" src={mediaConfig.story.cover} title={storyConfig.title} fadeTop />
+      <SectionCover
+        id="notre-histoire"
+        src={mediaConfig.story.cover}
+        kicker={invitationConfig.story.surtitle}
+        title={storyConfig.title}
+        fadeTop
+      />
       <LesLieux />
-      <SectionCover id="le-programme" src={mediaConfig.program.cover} title="Le programme" />
+      <SectionCover
+        id="le-programme"
+        src={mediaConfig.program.cover}
+        kicker={invitationConfig.program.surtitle}
+        title={invitationConfig.program.title}
+      />
       {SHOW_SECTIONS_AFTER_HERO && (
         <>
           <EditorialBanner />
@@ -63,9 +74,9 @@ export function App() {
           <RsvpSection />
           {hasSecondVerse && <BibleVerse verseIndex={1} />}
           <SeatingPlanSection />
-          <FinalScene />
         </>
       )}
+      <FinalScene />
     </main>
   );
 }

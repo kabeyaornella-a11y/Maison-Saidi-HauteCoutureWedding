@@ -13,6 +13,9 @@ export const themeConfig: ThemeConfig = {
     ivoryLight: '#FBF8F3',
     black: '#080808',
     white: '#FFFFFF',
+    textDark: '#3A3029',
+    textSecondary: '#75695D',
+    warmWhite: '#FFFDF8',
   },
   fonts: {
     display: 'Cormorant Garamond',   // titres

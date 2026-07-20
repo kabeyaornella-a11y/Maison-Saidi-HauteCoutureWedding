@@ -2,25 +2,28 @@ import type { ThemeConfig } from '../../types/media.types';
 
 export const themeConfig: ThemeConfig = {
   colors: {
-    navyDeep: '#050B1E',
-    navy: '#193060',
+    navyDeep: '#07162F',
+    navy: '#0D2346',
     blue: '#315381',
     steelBlue: '#859FC0',
     iceBlue: '#CEE0F4',
-    champagne: '#C6A66B',
-    champagneLight: '#D8C49A',
-    ivory: '#F7F2EA',
-    ivoryLight: '#FBF8F3',
+    champagne: '#C7A15A',
+    champagneLight: '#E2C88F',
+    ivory: '#F7F0E5',
+    ivoryLight: '#FFF9F0',
     black: '#080808',
     white: '#FFFFFF',
+    textDark: '#3A3029',
+    textSecondary: '#75695D',
+    warmWhite: '#FFFDF8',
   },
   fonts: {
     display: 'Cormorant Garamond',
     script: 'Chopin Script',
-    body: 'Inter',
-    // Police Google Fonts chargée dynamiquement (display + body).
+    body: 'Montserrat',
+    // Police Google Fonts chargée dynamiquement (script secondaire + corps de texte).
     googleFontsUrl:
-      'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap',
+      'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600&display=swap',
     // Police custom (signature) chargée dynamiquement via FontFace API.
     scriptFontFile: '/clients/maison-saidi/assets/fonts/ChopinScript.otf',
   },

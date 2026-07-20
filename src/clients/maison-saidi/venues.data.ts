@@ -13,8 +13,8 @@ export const venuesConfig: VenuesConfig = {
     description:
       'C’est dans l’élégance et l’émotion d’un engagement officiellement prononcé que débutera cette journée si précieuse.',
     dateLabel: '22 mai 2027',
-    time: '[Heure à confirmer]',
-    address: '[Adresse à intégrer]',
+    time: '13h00',
+    address: '177 avenue Gabriel Péri, 92230 Gennevilliers',
     buttonLabel: 'Voir l’itinéraire',
   },
   blessing: {
@@ -26,8 +26,8 @@ export const venuesConfig: VenuesConfig = {
     secondaryDescription:
       'Nous aurons la joie de vous accueillir pour une soirée placée sous le signe de l’amour, du partage et de l’élégance.',
     dateLabel: '22 mai 2027',
-    time: '[Heure de la bénédiction]',
-    address: '[Adresse à intégrer]',
+    time: '15h00',
+    address: '74 rue de Dampont, 95450 Us',
     buttonLabel: 'Rejoindre Gardénia Réception',
   },
 };

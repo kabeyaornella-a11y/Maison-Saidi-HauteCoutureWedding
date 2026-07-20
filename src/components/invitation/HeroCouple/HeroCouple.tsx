@@ -99,6 +99,7 @@ export function HeroCouple() {
             <span className={styles.goldRuleHalf} />
             <span className={styles.goldRuleHalf} />
           </div>
+          <p className={styles.dateLabel}>{invitationConfig.couple.weddingDateLabel}</p>
           <p className={styles.tagline}>{invitationConfig.couple.heroTagline}</p>
         </div>
       </div>

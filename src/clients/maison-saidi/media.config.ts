@@ -37,4 +37,7 @@ export const mediaConfig: MediaConfig = {
   program: {
     cover: `${base}/backgrounds/programme-clair.jpg`,
   },
+  finalScene: {
+    photo: `${base}/photos/couple-final.jpg`,
+  },
 };

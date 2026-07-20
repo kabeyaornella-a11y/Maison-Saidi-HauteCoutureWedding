@@ -119,47 +119,48 @@
   transform: translateY(-50%);
 }
 
-.brand {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 6vw, 3.65rem);
-  font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: clamp(0.16em, 1.35vw, 0.28em);
-  text-transform: uppercase;
-  color: #f8f2e7;
-  text-shadow: 0 4px 24px rgba(2, 7, 24, 0.62);
-}
-
 .rule {
   width: clamp(5.5rem, 20vw, 8.5rem);
   height: 1px;
-  margin-top: clamp(1rem, 2.2vh, 1.45rem);
+  margin-top: 0;
   background: linear-gradient(90deg, transparent, rgba(198, 166, 107, 0.94), transparent);
 }
 
-.edition {
-  margin: clamp(0.85rem, 1.8vh, 1.2rem) 0 0;
+/* Surtitre : "Maison Saïdi présente". */
+.surtitle {
+  margin: 0 0 clamp(1rem, 2.2vh, 1.45rem);
   font-family: var(--font-body);
-  font-size: clamp(0.66rem, 1.8vw, 0.84rem);
+  font-size: clamp(0.625rem, 1.6vw, 0.8125rem);
   font-weight: 500;
   line-height: 1;
-  letter-spacing: clamp(0.3em, 1.3vw, 0.46em);
+  letter-spacing: 0.38em;
   text-transform: uppercase;
-  color: #d9be86;
+  color: var(--champagne);
 }
 
+/* Texte principal : la phrase d'ouverture, en grand, dans la police signature. */
 .opening {
-  max-width: 31ch;
+  max-width: 30ch;
   margin: clamp(1.15rem, 2.7vh, 1.8rem) 0 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.12rem, 3.5vw, 1.55rem);
-  font-style: italic;
+  font-family: var(--font-script);
+  font-size: clamp(1.875rem, 6.5vw, 3.125rem);
   font-weight: 400;
-  line-height: 1.36;
-  color: rgba(248, 244, 237, 0.96);
+  line-height: 1.25;
+  color: var(--ivory);
   text-wrap: balance;
   text-shadow: 0 3px 18px rgba(2, 7, 24, 0.65);
+}
+
+.invitationPhrase {
+  max-width: 34ch;
+  margin: clamp(0.9rem, 2vh, 1.3rem) 0 0;
+  font-family: var(--font-script);
+  font-size: clamp(1.375rem, 3.6vw, 2rem);
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--champagne-light);
+  text-wrap: balance;
+  text-shadow: 0 3px 18px rgba(2, 7, 24, 0.5);
 }
 
 .enterButton {
@@ -264,9 +265,9 @@
   .monogramStage { top: 1.4rem; }
   .monogramWrap { width: clamp(7.5rem, 22vh, 10.5rem); }
   .copy { top: 55%; }
-  .opening { margin-top: 0.85rem; font-size: clamp(1rem, 2.6vh, 1.25rem); }
-  .rule { margin-top: 0.75rem; }
-  .edition { margin-top: 0.7rem; }
+  .opening { margin-top: 0.85rem; font-size: clamp(1.6rem, 5vh, 2.2rem); }
+  .invitationPhrase { margin-top: 0.6rem; font-size: clamp(1.15rem, 3.2vh, 1.5rem); }
+  .surtitle { margin-bottom: 0.7rem; }
   .enterButton { bottom: max(0.9rem, env(safe-area-inset-bottom)); }
 }
 

@@ -62,10 +62,10 @@ export function IntroMaison() {
       </div>
 
       <div className={styles.copy}>
-        <h1 className={styles.brand}>{invitationConfig.brand.name}</h1>
+        <h1 className={styles.surtitle}>{invitationConfig.intro.surtitle}</h1>
         <span className={styles.rule} aria-hidden="true" />
-        <p className={styles.edition}>{invitationConfig.brand.edition}</p>
         <p className={styles.opening}>{invitationConfig.brand.openingText}</p>
+        <p className={styles.invitationPhrase}>{invitationConfig.intro.invitationPhrase}</p>
       </div>
 
       <button
@@ -74,7 +74,7 @@ export function IntroMaison() {
         onClick={enterInvitation}
         disabled={isLeaving}
       >
-        <span className={styles.enterLabel}>Découvrir la collection</span>
+        <span className={styles.enterLabel}>{invitationConfig.intro.enterLabel}</span>
         <span className={styles.chevrons} aria-hidden="true">
           <span />
           <span />
