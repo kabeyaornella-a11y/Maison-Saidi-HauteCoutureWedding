@@ -1,13 +1,20 @@
 .root {
   position: relative;
   overflow: hidden;
-  height: clamp(260px, 46vw, 460px);
   background: var(--ivory);
 }
 
-.hasContent {
-  height: auto;
-  min-height: clamp(260px, 46vw, 460px);
+.imageBlock {
+  position: relative;
+  height: clamp(260px, 46vw, 460px);
+  overflow: hidden;
+}
+
+/* Fondu en bas de l'image quand du texte suit, pour se dissoudre dans le
+   fond ivoire uni du bloc sans démarcation nette. */
+.hasContent .imageBlock {
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
 }
 
 .image {

@@ -13,10 +13,12 @@ type Props = {
 export function SilkBand({ src, alt = '', monogramSrc, monogramAlt = '', edgeLines = false, children }: Props) {
   return (
     <div className={`${styles.root} ${children ? styles.hasContent : ''}`} aria-hidden={alt === '' ? 'true' : undefined}>
-      <img className={styles.image} src={src} alt={alt} draggable={false} loading="lazy" />
-      {monogramSrc && (
-        <img className={styles.monogram} src={monogramSrc} alt={monogramAlt} draggable={false} loading="lazy" />
-      )}
+      <div className={styles.imageBlock}>
+        <img className={styles.image} src={src} alt={alt} draggable={false} loading="lazy" />
+        {monogramSrc && (
+          <img className={styles.monogram} src={monogramSrc} alt={monogramAlt} draggable={false} loading="lazy" />
+        )}
+      </div>
       {edgeLines && (
         <>
           <span className={`${styles.edgeLine} ${styles.edgeLineTop}`} />
