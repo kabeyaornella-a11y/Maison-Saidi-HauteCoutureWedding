@@ -57,6 +57,7 @@ export function App() {
         kicker={invitationConfig.program.surtitle}
         title={invitationConfig.program.title}
       />
+      <DressCodeSection />
       {SHOW_SECTIONS_AFTER_HERO && (
         <>
           <EditorialBanner />
@@ -65,7 +66,6 @@ export function App() {
           <VenueSection id="ceremonie-civile" venue={venuesConfig.civil} icon={<CivilVenueIcon />} tone="ivory" />
           <VenueSection id="benediction-reception" venue={venuesConfig.blessing} icon={<ReceptionVenueIcon />} tone="navy" />
           <ProgramSection />
-          <DressCodeSection />
           <GiftsSection />
           <MemoriesSection />
           <PlaylistSection />

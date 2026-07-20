@@ -5,97 +5,118 @@
   padding-block: clamp(4rem, 10vw, 8rem);
 }
 
-.kicker {
+.surtitle {
+  margin: 0 0 clamp(0.9rem, 2vw, 1.2rem);
   font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(0.625rem, 1.3vw, 0.6875rem);
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  letter-spacing: 0.24em;
-  font-size: clamp(0.72rem, 1.2vw, 0.88rem);
-  color: var(--champagne-light);
-  margin: 0 0 0.6rem;
+  color: var(--champagne);
 }
 
 .title {
-  font-family: var(--font-display);
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
-  margin: 0 0 1.4rem;
-}
-
-.intro {
-  font-family: var(--font-display);
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
-  max-width: 640px;
-  margin: 0 auto clamp(2.5rem, 6vw, 4rem);
-  opacity: 0.9;
-}
-
-.columns {
-  display: grid;
-  gap: 2rem;
-  max-width: 720px;
-  margin: 0 auto clamp(2.5rem, 6vw, 4rem);
-}
-
-@media (min-width: 640px) {
-  .columns {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.column h3 {
+  margin: 0 0 clamp(1.2rem, 3vw, 1.8rem);
   font-family: var(--font-script);
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-  color: var(--champagne);
-  margin: 0 0 0.6rem;
+  font-weight: 400;
+  font-size: clamp(3rem, 8.5vw, 5.25rem);
+  color: var(--warm-white);
 }
 
-.column p {
+.phrase {
+  max-width: 640px;
+  margin: 0 auto clamp(1rem, 2.5vw, 1.5rem);
+  font-family: var(--font-script);
+  font-size: clamp(1.6875rem, 4vw, 2.375rem);
+  line-height: 1.35;
+  color: var(--champagne-light);
+}
+
+.description {
+  max-width: 620px;
+  margin: 0 auto clamp(3rem, 7vw, 4.5rem);
   font-family: var(--font-body);
-  font-size: 0.92rem;
-  line-height: 1.7;
-  opacity: 0.88;
-  margin: 0;
+  font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
+  line-height: 1.8;
+  color: rgba(247, 240, 229, 0.82);
+}
+
+.runwayFrame {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto clamp(3rem, 7vw, 4.5rem);
+  overflow: hidden;
+}
+
+.runway {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.beams {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  mix-blend-mode: screen;
+}
+
+/* Faisceaux de spotlight : cône du plus étroit (au niveau du projecteur)
+   au plus large (vers les silhouettes), flouté pour un halo lumineux. */
+.beam {
+  position: absolute;
+  transform-origin: top center;
+  transform: rotate(var(--beam-rotate));
+  clip-path: polygon(46% 0%, 54% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 248, 224, 0.55) 0%,
+    rgba(255, 238, 200, 0.28) 35%,
+    rgba(226, 200, 143, 0.1) 70%,
+    transparent 100%
+  );
+  filter: blur(6px);
+  opacity: 0;
+  animation: beamGlow 8s ease-in-out infinite;
+}
+
+@keyframes beamGlow {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.7; }
 }
 
 .palette {
-  margin-bottom: clamp(2.5rem, 6vw, 4rem);
-}
-
-.swatches {
   display: flex;
   justify-content: center;
-  gap: 0.9rem;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: clamp(0.7rem, 2vw, 1rem);
+  margin: 0 auto clamp(1.5rem, 3.5vw, 2.2rem);
 }
 
 .swatch {
-  width: clamp(2.2rem, 5vw, 3rem);
-  height: clamp(2.2rem, 5vw, 3rem);
+  width: clamp(1.9rem, 4.5vw, 2.5rem);
+  height: clamp(1.9rem, 4.5vw, 2.5rem);
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(5, 11, 30, 0.4);
 }
 
-.paletteLabel {
+.mention {
+  margin: 0;
+  max-width: 480px;
+  margin-inline: auto;
   font-family: var(--font-body);
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.78rem;
-  color: var(--ice-blue);
-  margin: 0 0 0.4rem;
+  font-weight: 500;
+  font-size: clamp(0.6875rem, 1.3vw, 0.75rem);
+  color: #c9a15f;
 }
 
-.paletteNote {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 0.92rem;
-  opacity: 0.75;
-  margin: 0;
-}
-
-.closing {
-  font-family: var(--font-script);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: var(--champagne);
-  margin: 0;
+@media (prefers-reduced-motion: reduce) {
+  .beam {
+    animation: none;
+    opacity: 0.5;
+  }
 }

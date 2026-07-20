@@ -1,15 +1,10 @@
 import type { DressCodeConfig } from '../../types/dresscode.types';
 
 export const dressCodeConfig: DressCodeConfig = {
-  kicker: 'Dress code',
-  title: 'Titre de la section',
-  intro: 'Texte d’introduction du dress code.',
-  forHerLabel: 'Pour elle',
-  forHerText: 'Consignes de tenue pour elle.',
-  forHimLabel: 'Pour lui',
-  forHimText: 'Consignes de tenue pour lui.',
-  paletteLabel: 'Couleur 1 — Couleur 2 — Couleur 3',
-  paletteColors: ['navy', 'champagne', 'iceBlue'],
-  paletteNote: 'Note optionnelle (ex: couleur réservée à la mariée).',
-  closingSentence: 'Phrase de conclusion.',
+  surtitle: 'Surtitre du dress code',
+  title: 'Dress Code',
+  phrase: 'Phrase principale, courte et élégante.',
+  description: 'Description des attentes vestimentaires pour vos invités.',
+  paletteColors: ['#0D2346', '#C7A15A', '#7B2D3E'],
+  mention: 'Mention optionnelle (ex : couleur réservée à la mariée).',
 };

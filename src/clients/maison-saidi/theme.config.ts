@@ -20,10 +20,10 @@ export const themeConfig: ThemeConfig = {
   fonts: {
     display: 'Cormorant Garamond',
     script: 'Chopin Script',
-    body: 'Montserrat',
+    body: 'Inter',
     // Police Google Fonts chargée dynamiquement (script secondaire + corps de texte).
     googleFontsUrl:
-      'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600&display=swap',
+      'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap',
     // Police custom (signature) chargée dynamiquement via FontFace API.
     scriptFontFile: '/clients/maison-saidi/assets/fonts/ChopinScript.otf',
   },

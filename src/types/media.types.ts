@@ -15,6 +15,7 @@ export type MediaConfig = {
   illustrations: { mairie: string; gardenia: string };
   program: { cover: string };
   finalScene: { photo: string };
+  dressCode: { runway: string };
 };
 
 export type ThemeConfig = {

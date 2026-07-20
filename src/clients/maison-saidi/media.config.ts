@@ -40,4 +40,7 @@ export const mediaConfig: MediaConfig = {
   finalScene: {
     photo: `${base}/photos/couple-final.jpg`,
   },
+  dressCode: {
+    runway: `${base}/illustrations/dresscode-runway.png`,
+  },
 };

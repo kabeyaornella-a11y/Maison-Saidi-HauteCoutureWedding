@@ -1,13 +1,8 @@
 export type DressCodeConfig = {
-  kicker: string;
+  surtitle: string;
   title: string;
-  intro: string;
-  forHerLabel: string;
-  forHerText: string;
-  forHimLabel: string;
-  forHimText: string;
-  paletteLabel: string;
+  phrase: string;
+  description: string;
   paletteColors: string[];
-  paletteNote: string;
-  closingSentence: string;
+  mention: string;
 };
