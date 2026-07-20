@@ -25,7 +25,7 @@
   top: 50%;
   right: clamp(1.25rem, 6vw, 3.5rem);
   transform: translateY(-50%);
-  width: clamp(62px, 12.1vw, 106px);
+  width: clamp(74px, 14.5vw, 127px);
   height: auto;
   opacity: 0.92;
   filter: drop-shadow(0 2px 10px rgba(5, 11, 30, 0.18));
@@ -35,7 +35,7 @@
   top: clamp(1.6rem, 4vw, 2.4rem);
   right: 50%;
   transform: translateX(50%);
-  width: clamp(66px, 9.9vw, 92px);
+  width: clamp(79px, 11.9vw, 110px);
 }
 
 .content {
