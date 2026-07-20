@@ -18,6 +18,15 @@ export const invitationConfig: InvitationConfig = {
     invitationPhrase: 'Phrase d’invitation courte, sur l’écran d’accueil.',
     enterLabel: 'Découvrir l’invitation',
   },
+  presentation: {
+    presents: 'Présente',
+    collectionType: 'Collection Haute Couture',
+    collectionName: 'Nom de la collection',
+    season: 'Collection Saison • Année',
+    presentationLabel: 'Présentation officielle',
+    accreditationText: 'Texte d’accréditation nominative.',
+    invitationText: 'Phrase d’invitation courte pour la date du mariage.',
+  },
   couple: {
     displayNames: 'Prénom & Prénom',
     weddingDate: '2027-01-01T00:00:00+02:00',     // ISO, avec le bon fuseau horaire

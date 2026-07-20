@@ -18,6 +18,17 @@ export const invitationConfig: InvitationConfig = {
       'Vous êtes conviés à découvrir une histoire façonnée par le temps, portée par la foi et célébrée par l’amour.',
     enterLabel: 'Découvrir l’invitation',
   },
+  presentation: {
+    presents: 'Présente',
+    collectionType: 'Collection Haute Couture',
+    collectionName: 'Royal Blue Wedding',
+    season: 'Collection Printemps • 2027',
+    presentationLabel: 'Présentation officielle',
+    accreditationText:
+      'Cette accréditation nominative vous donne accès à la présentation officielle de notre Collection Haute Couture « Royal Blue Wedding ».',
+    invitationText:
+      'Le 22 mai 2027, nous dévoilerons une création façonnée par le temps, portée par la foi et célébrée par l’amour.',
+  },
   couple: {
     displayNames: 'Saïmira & Aindi',
     weddingDate: '2027-05-22T00:00:00+02:00',

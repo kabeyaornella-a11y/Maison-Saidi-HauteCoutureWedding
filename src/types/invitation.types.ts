@@ -16,6 +16,15 @@ export type InvitationConfig = {
     invitationPhrase: string;
     enterLabel: string;
   };
+  presentation: {
+    presents: string;
+    collectionType: string;
+    collectionName: string;
+    season: string;
+    presentationLabel: string;
+    accreditationText: string;
+    invitationText: string;
+  };
   couple: {
     displayNames: string;
     weddingDate: string;

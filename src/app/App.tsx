@@ -1,6 +1,7 @@
 import { IntroMaison } from '../components/invitation/IntroMaison/IntroMaison';
 import { HeroCouple } from '../components/invitation/HeroCouple/HeroCouple';
 import { SilkBand } from '../components/invitation/SilkBand/SilkBand';
+import { PresentationCard } from '../components/invitation/PresentationCard/PresentationCard';
 import { EditorialBanner } from '../components/invitation/EditorialBanner/EditorialBanner';
 import { HandsSection } from '../components/invitation/HandsSection/HandsSection';
 import { CountdownSection } from '../components/invitation/CountdownSection/CountdownSection';
@@ -39,7 +40,9 @@ export function App() {
         monogramSrc={mediaConfig.brand.monogram}
         monogramAlt={invitationConfig.brand.monogramAlt}
         edgeLines
-      />
+      >
+        <PresentationCard />
+      </SilkBand>
       <HandsSection />
       <CountdownSection />
       <BibleVerse verseIndex={0} />
