@@ -7,6 +7,7 @@
   color: var(--warm-white);
   text-align: center;
   padding: 3rem 1.25rem;
+  background: var(--navy-deep);
 }
 
 .photo {
@@ -16,6 +17,20 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/* Sur les écrans plus étroits/hauts que la photo (paysage 1983:793), un
+   simple "cover" recadre l'essentiel de sa largeur. On borne alors la photo
+   à son propre ratio, centrée verticalement, avec le fond marine en
+   letterboxing en haut/bas, pour qu'elle reste toujours visible en entier. */
+@media (max-aspect-ratio: 1983/793) {
+  .photo {
+    inset: auto 0;
+    top: 50%;
+    height: auto;
+    aspect-ratio: 1983 / 793;
+    transform: translateY(-50%);
+  }
 }
 
 /* Voile léger uniquement en bas, pour la lisibilité du texte — pas de filtre

@@ -25,6 +25,24 @@
   user-select: none;
 }
 
+/* Sur les écrans plus larges que hauts (tablette paysage, ordinateur), la
+   photo (portrait 9:16) ne doit plus être recadrée par la largeur : on borne
+   le cadre à son propre ratio, centré, avec le fond marine en lettrboxing de
+   part et d'autre, pour que le couple reste toujours visible en entier. */
+@media (min-aspect-ratio: 9/16) {
+  .portraitFrame {
+    inset: 0 auto;
+    left: 50%;
+    width: auto;
+    aspect-ratio: 1080 / 1920;
+    transform: translateX(-50%);
+  }
+
+  .photo {
+    object-position: center;
+  }
+}
+
 /* Léger vignettage en haut de la photo uniquement : s'efface complètement avant
    la zone du voile blanc en bas, pour que celui-ci garde sa vraie couleur
    blanche (pas de teinte grise/navy dessus). */
@@ -211,6 +229,30 @@
 
 @media (max-width: 700px) {
   .identity { top: 55%; }
+}
+
+/* Le texte est dimensionné en vw (relatif à la fenêtre entière) : une fois
+   le cadre borné à sa propre largeur (cf. règle plus haut), on repasse ces
+   tailles en svh (relatif à la hauteur, qui pilote la largeur du cadre via
+   aspect-ratio) pour garder les mêmes proportions au lieu de déborder du
+   cadre rétréci. Placé après les règles de base pour gagner sur l'ordre
+   de cascade (même spécificité). */
+@media (min-aspect-ratio: 9/16) {
+  .names {
+    font-size: clamp(3.16rem, 5.82svh, 6.21rem);
+  }
+
+  .goldRule {
+    width: clamp(5.5rem, 7.31svh, 8.5rem);
+  }
+
+  .dateLabel {
+    font-size: clamp(0.75rem, 0.9svh, 0.9375rem);
+  }
+
+  .tagline {
+    font-size: clamp(1.4375rem, 2.03svh, 2.375rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
