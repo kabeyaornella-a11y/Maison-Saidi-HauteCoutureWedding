@@ -2,6 +2,10 @@ import { useClient } from '../../../context/ClientContext';
 import { Section } from '../../layout/Section/Section';
 import styles from './FinalScene.module.css';
 
+function replayExperience() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 export function FinalScene() {
   const { invitationConfig, mediaConfig } = useClient();
 
@@ -20,9 +24,13 @@ export function FinalScene() {
         <p className={styles.phrase}>{invitationConfig.finalScene.phrase}</p>
         <p className={styles.signatureLine}>{invitationConfig.finalScene.signatureLine}</p>
         <p className={styles.names}>{invitationConfig.couple.displayNames}</p>
-      </div>
 
-      <p className={styles.footer}>{invitationConfig.finalScene.footer}</p>
+        <button type="button" className={styles.replayButton} onClick={replayExperience}>
+          Revivre l’expérience
+        </button>
+
+        <p className={styles.footer}>{invitationConfig.finalScene.footer}</p>
+      </div>
     </Section>
   );
 }

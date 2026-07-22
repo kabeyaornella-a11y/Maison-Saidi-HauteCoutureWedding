@@ -21,24 +21,58 @@
   gap: clamp(1.6rem, 4vw, 2.6rem);
 }
 
-.surtitle {
-  margin: 0;
-  font: 500 clamp(0.625rem, 1.4vw, 0.75rem) / 1 var(--font-body);
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--champagne);
-}
-
 .content h2 {
   margin: 0;
-  font: 400 clamp(2.375rem, 7vw, 4.125rem) / 1.1 var(--font-script);
+  font: 400 clamp(1.5rem, 3.4vw, 2.125rem) / 1.3 var(--font-body);
+  letter-spacing: 0.01em;
   color: var(--warm-white);
 }
 
+.gridWrap {
+  position: relative;
+}
+
+/* Faisceaux de spotlight au-dessus des chiffres, même principe que le
+   défilé du Dress Code : cônes lumineux qui pulsent doucement. */
+.beams {
+  position: absolute;
+  inset: -20% 0 auto 0;
+  height: 140%;
+  overflow: hidden;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.beam {
+  position: absolute;
+  top: 0;
+  transform-origin: top center;
+  transform: rotate(var(--beam-rotate));
+  clip-path: polygon(46% 0%, 54% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 248, 224, 0.5) 0%,
+    rgba(255, 238, 200, 0.24) 40%,
+    rgba(226, 200, 143, 0.08) 75%,
+    transparent 100%
+  );
+  filter: blur(7px);
+  opacity: 0;
+  animation: beamGlow 7s ease-in-out infinite;
+}
+
+@keyframes beamGlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.65; }
+}
+
 .grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(0.5rem, 3vw, 2.5rem);
+  gap: clamp(0.5rem, 3vw, 1.5rem);
   max-width: 900px;
   margin: auto;
   width: 100%;
@@ -46,7 +80,13 @@
 
 .unit {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.7rem;
+  justify-items: center;
+  padding: clamp(0.9rem, 2.6vw, 1.5rem) clamp(0.4rem, 1.6vw, 1rem);
+  border: 1px solid rgba(199, 161, 90, 0.35);
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(226, 200, 143, 0.08), rgba(5, 11, 30, 0.25));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 10px 24px rgba(5, 11, 30, 0.35);
 }
 
 .unit strong {
@@ -74,7 +114,12 @@
 }
 
 @media (max-width: 520px) {
-  .grid { gap: 0.25rem; }
+  .grid { gap: 0.4rem; }
+  .unit { padding: 0.7rem 0.3rem; }
   .unit strong { font-size: clamp(1.6rem, 9vw, 2.4rem); }
   .unit span { letter-spacing: 0.09em; font-size: 0.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beam { animation: none; opacity: 0.4; }
 }

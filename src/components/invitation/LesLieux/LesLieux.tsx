@@ -11,7 +11,7 @@ export function LesLieux() {
       id="les-lieux"
       label="Les lieux"
       className={styles.root}
-      style={{ '--bg': `url(${mediaConfig.venues.background})` } as React.CSSProperties}
+      style={{ '--bg': `url(${mediaConfig.countdown.background})` } as React.CSSProperties}
     >
       <Container>
         <p className={styles.surtitle}>{invitationConfig.venues.surtitle}</p>

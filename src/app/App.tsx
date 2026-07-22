@@ -49,8 +49,8 @@ export function App() {
       <SectionCover
         id="notre-histoire"
         src={mediaConfig.story.cover}
-        kicker={invitationConfig.story.surtitle}
         title={storyConfig.title}
+        uppercaseTitle
         fadeTop
       />
       <LesLieux />
@@ -59,6 +59,7 @@ export function App() {
         src={mediaConfig.program.cover}
         kicker={invitationConfig.program.surtitle}
         title={invitationConfig.program.title}
+        align="top"
       />
       <DressCodeSection />
       {SHOW_SECTIONS_AFTER_HERO && (

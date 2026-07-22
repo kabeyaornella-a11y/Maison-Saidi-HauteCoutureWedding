@@ -33,6 +33,11 @@
   text-align: center;
 }
 
+.identityTop {
+  top: clamp(2.5rem, 8vw, 4.5rem);
+  transform: translateX(-50%);
+}
+
 .kicker {
   margin: 0 0 clamp(0.9rem, 2vw, 1.3rem);
   font-family: var(--font-body);
@@ -49,6 +54,10 @@
   font-weight: 400;
   font-size: clamp(2.875rem, 8vw, 5.125rem);
   color: var(--navy-deep);
+}
+
+.titleUppercase {
+  text-transform: uppercase;
 }
 
 .subtitle {
